@@ -162,11 +162,15 @@ span.navbar-toggler-icon {
 }
 
 .fullscreen-height {
-    height: calc(100vh - 100px);
-    height: -o-calc(100vh - 100px);
+    height: calc(100vh - 103px);
+    height: -o-calc(100vh - 103px);
     /* opera */
-    height: -webkit-calc(100vh - 100px);
+    height: -webkit-calc(100vh - 103px);
     /* google, safari */
-    height: -moz-calc(100vh - 100px);
+    height: -moz-calc(100vh - 103px);
     /* firefox */
+}
+
+.extra-margin-hero {
+margin-bottom: 2rem !important;
 }

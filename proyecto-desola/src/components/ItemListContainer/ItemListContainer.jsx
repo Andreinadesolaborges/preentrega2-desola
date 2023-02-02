@@ -24,7 +24,7 @@ export const Itemlistcontainer = () => {
                 setProductos(productsList)
             })
         }
-    }, [])
+    }, [idCategoria])
 
     return (
         <>
