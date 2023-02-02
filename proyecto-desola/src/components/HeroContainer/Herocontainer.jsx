@@ -4,7 +4,7 @@ const Herocontainer = ({ mainHeader, subtitle }) => {
     return (
         <>
             <div className="container-fluid p-3">
-                <div className="row align-items-center vh-100">
+                <div className="row align-items-center fullscreen-height">
                     <Hero/>
                     <div className="col-12 order-3 col-md-2 order-md-2 text-center align-self-end py-3">
                         <a href="#productos">

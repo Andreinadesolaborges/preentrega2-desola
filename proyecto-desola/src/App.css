@@ -104,7 +104,7 @@ span.navbar-toggler-icon {
     transition: .4s ease-in-out;
     -webkit-transition-property: transform;
     transition-property: transform;
-    
+
 }
 
 .hvr-float-shadow:before {
@@ -143,20 +143,30 @@ span.navbar-toggler-icon {
     /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
 }
 
-.pad-btn{
+.pad-btn {
     padding: 20px 24px;
 }
 
-.pad-btn-counter{
+.pad-btn-counter {
     padding: 12px 18px;
 }
 
-.price-text{
+.price-text {
     width: fit-content;
     margin-bottom: 1rem;
 }
 
-.price-text-detail{
+.price-text-detail {
     width: fit-content;
     margin-bottom: 0rem;
+}
+
+.fullscreen-height {
+    height: calc(100vh - 100px);
+    height: -o-calc(100vh - 100px);
+    /* opera */
+    height: -webkit-calc(100vh - 100px);
+    /* google, safari */
+    height: -moz-calc(100vh - 100px);
+    /* firefox */
 }

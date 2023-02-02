@@ -1,16 +1,24 @@
-import Navbar from "./components/Navbar/Navbar";
 import './App.css';
-import Herocontainer from "./components/HeroContainer/Herocontainer";
-import Cardcontainer from "./components/CardContainer/CardContainer";
-import {Itemdetailcontainer} from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import Navbar from "./components/Navbar/Navbar";
+import Cardcontainer from "./components/CardContainer/CardContainer";
+import { Itemdetailcontainer } from './components/ItemDetailContainer/ItemDetailContainer';
+import { Itemlistcontainer } from './components/ItemListContainer/ItemListContainer';
 const App = () => {
   return (
     <>
-        <Navbar />
-        <Herocontainer mainHeader={"Bienvenid@s a la tienda de Nina"} subtitle={"La magia existe"} />
-        <Cardcontainer/>
-        <Itemdetailcontainer/>
+      <BrowserRouter>
+        <Navbar/>
+        <Routes>
+          
+          <Route path='/' element={<Cardcontainer/>}/> 
+          <Route path='/product/:id' element={<Itemdetailcontainer/>}/> 
+          <Route path='/category/:idCategoria' element={<Itemlistcontainer/>}/>
+          
+        </Routes>
+      </BrowserRouter>
+
     </>
   );
 }
