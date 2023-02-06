@@ -3,13 +3,13 @@ import { useParams } from "react-router-dom";
 import Itemlist from "../ItemList/ItemList";
 export const Itemlistcontainer = () => {
     const [productos, setProductos] = useState([])
-    const {idCategoria} = useParams()
+    const {nombreCategoria} = useParams()
     useEffect(() => {
-        if (idCategoria){
+        if (nombreCategoria){
             fetch('../json/productos.json')
             .then(response => response.json())
             .then(items => {
-                const products = items.filter(prod => prod.idCategoria === parseInt (idCategoria))
+                const products = items.filter(prod => prod.nombreCategoria === nombreCategoria)
                 const productsList = Itemlist({ products }) //Array de productos jsx
                 console.log(productsList)
                 setProductos(productsList)
@@ -24,7 +24,7 @@ export const Itemlistcontainer = () => {
                 setProductos(productsList)
             })
         }
-    }, [idCategoria])
+    }, [nombreCategoria])
 
     return (
         <>

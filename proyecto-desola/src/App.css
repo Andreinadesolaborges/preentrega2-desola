@@ -19,6 +19,10 @@ html {
     margin-right: 0.5em;
 }
 
+.card-title {
+    height: 45px;
+}
+
 span {
     font-size: 12px;
 }
@@ -174,3 +178,13 @@ span.navbar-toggler-icon {
 .extra-margin-hero {
 margin-bottom: 2rem !important;
 }
+
+
+@media only screen and (max-width: 576px) {
+    h4 {
+        font-size: 1rem;
+    }
+    .btn {
+        font-size: .5rem;
+    }
+  }
