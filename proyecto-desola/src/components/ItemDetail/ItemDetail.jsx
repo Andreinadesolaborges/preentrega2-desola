@@ -1,7 +1,10 @@
-import { toast } from "react-toastify";
 import Itemcount from "../ItemCount/ItemCount";
 export const Itemdetail = ({ item }) => {
-    const agregarCarrito = () => toast.success('🦄 Ha sido agregado');
+    
+    const onAdd = (cantidad) =>{
+        console.log (cantidad);
+        console.log (item);
+    }
 
     return (
         <>
@@ -15,8 +18,8 @@ export const Itemdetail = ({ item }) => {
                             <h4 className="card-title">{item.nombre}</h4>
                             <p className="card-text">{item.descripcion}</p>
                             <h6 className="price-text-detail badge rounded-pill bg-light d-block mx-auto">${new Intl.NumberFormat('de-DE').format(item.precio)}</h6>
-                            <Itemcount valInicial={1} stock={item.stock} />
-                            <button id={item.id} className="btn btn-primary zoomIn d-block mx-auto" onClick={()=>agregarCarrito()}>Comprar</button>
+                            <Itemcount valInicial={1} stock={item.stock} onAdd={onAdd}/>
+                            
                         </div>
                     </div>
 
