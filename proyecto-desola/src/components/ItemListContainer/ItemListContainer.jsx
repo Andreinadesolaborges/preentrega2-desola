@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Itemlist from "../ItemList/ItemList";
+
+//Context//
+import { useDarkModeContext } from "../../context/DarkModeContext";
 export const Itemlistcontainer = () => {
-    const [productos, setProductos] = useState([])
-    const {nombreCategoria} = useParams()
+    const [productos, setProductos] = useState([]);
+    const {nombreCategoria} = useParams();
+    const {darkMode} = useDarkModeContext();
+    console.log(darkMode);
     useEffect(() => {
         if (nombreCategoria){
             fetch('../json/productos.json')

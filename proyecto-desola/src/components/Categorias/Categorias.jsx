@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import { useDarkModeContext } from "../../context/DarkModeContext";
 const Categorias = () => {
+    const {darkMode} = useDarkModeContext();
     return (
         <>
             <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <button className="btn btn-light">Productos</button>
+                <button className={`btn ${darkMode ? 'text-white' : 'text-dark'}`}>Productos</button>
                 </a>
                 <ul className="dropdown-menu">
                     <li><Link className="dropdown-item" to={"/category/Aromaterapia"}>Aromaterapia</Link></li>

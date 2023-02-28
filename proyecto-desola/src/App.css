@@ -23,6 +23,14 @@ html {
     height: 45px;
 }
 
+.card {
+    background-color: white;
+}
+
+.cardDark {
+    background-color: hsl(0,0,33%);
+}
+
 span {
     font-size: 12px;
 }
@@ -177,6 +185,11 @@ span.navbar-toggler-icon {
 
 .extra-margin-hero {
 margin-bottom: 2rem !important;
+}
+
+.darkMode {
+    background-color: black;
+    color: gainsboro;
 }
 
 

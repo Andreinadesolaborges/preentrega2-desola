@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
+import { useDarkModeContext } from "../../context/DarkModeContext";
 const Item = ({ item }) => {
+    const {darkMode} = useDarkModeContext()
+
     return (
         <>
             <div className="col-6 col-sm-4 col-md-3 text-center align-self-center">
-                <div className="card hvr-float-shadow my-3">
+                <div className={` ${darkMode ? 'text-white bg-dark' : 'text-dark bg-white' } card hvr-float-shadow my-3`}>
                     <img  src={`../img/${item.img}`} className="card-img-top img-fluid" alt={`Imagen de ${item.nombre}`} />
                     <div className="card-body">
                         <h4 className="card-title">{item.nombre}</h4>
