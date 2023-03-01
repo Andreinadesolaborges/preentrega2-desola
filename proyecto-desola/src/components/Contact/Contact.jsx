@@ -20,7 +20,7 @@ export const Contact = () => {
     }
 
     return (
-        <div className="container PX-5">
+        <div className="container px-5">
             <div className="row align-items-center py-3">
                 <div className="col-12 text-center align-self-center mt-3">
                     <h2 className={`${darkMode ? 'text-light' : 'text-dark'} py-3`}>Contacto</h2>

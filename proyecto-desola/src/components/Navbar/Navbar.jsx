@@ -4,6 +4,7 @@ import Secciones from "../Secciones/Secciones";
 import { BotonDarkMode } from "./BotonDarkMode/BotonDarkMode";
 import { useDarkModeContext } from "../../context/DarkModeContext";
 import Logo from "../Logo/logo";
+
 const Navbar = () => {
   const {darkMode} = useDarkModeContext()
 

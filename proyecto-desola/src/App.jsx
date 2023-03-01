@@ -13,6 +13,7 @@ import Cardcontainer from "./components/CardContainer/CardContainer";
 import { Itemdetailcontainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { Itemlistcontainer } from './components/ItemListContainer/ItemListContainer';
 import { Contact } from './components/Contact/Contact';
+import { Cart } from './components/Cart/Cart';
 
 //Context//
 import { DarkModeProvider } from './context/DarkModeContext';
@@ -27,6 +28,7 @@ const App = () => {
             <Route path='/item/:id' element={<Itemdetailcontainer />} />
             <Route path='/category/:nombreCategoria' element={<Itemlistcontainer />} />
             <Route path='/contacto' element={<Contact />} />
+            <Route path='/cart' element={<Cart/>}/>
           </Routes>
           <ToastContainer />
         </DarkModeProvider>

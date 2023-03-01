@@ -1,10 +1,10 @@
 import Itemcount from "../ItemCount/ItemCount";
 import { useDarkModeContext } from "../../context/DarkModeContext";
 export const Itemdetail = ({ item }) => {
-    const {darkMode} = useDarkModeContext();
-    const onAdd = (cantidad) =>{
-        console.log (cantidad);
-        console.log (item);
+    const { darkMode } = useDarkModeContext();
+    const onAdd = (cantidad) => {
+        console.log(cantidad);
+        console.log(item);
     }
 
     return (
@@ -18,9 +18,8 @@ export const Itemdetail = ({ item }) => {
                         <div className="card-body">
                             <h4 className={`card-title ${darkMode ? 'text-light' : 'text-dark'}`}>{item.nombre}</h4>
                             <p className="card-text">{item.descripcion}</p>
-                            <h6 className={`price-text-detail badge rounded-pill ${darkMode ? 'bg-primary' : 'bg-secondary'} d-block mx-auto`}  >${new Intl.NumberFormat('de-DE').format(item.precio)}</h6>
-                            <Itemcount valInicial={1} stock={item.stock} onAdd={onAdd}/>
-                            
+                            <h6 className={`price-text-detail badge rounded-pill ${darkMode ? 'bg-primary' : 'bg-light'} d-block mx-auto`}  >${new Intl.NumberFormat('de-DE').format(item.precio)}</h6>
+                            <Itemcount valInicial={1} stock={item.stock} onAdd={onAdd} />
                         </div>
                     </div>
 

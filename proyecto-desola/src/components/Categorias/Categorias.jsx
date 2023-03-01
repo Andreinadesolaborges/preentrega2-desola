@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useDarkModeContext } from "../../context/DarkModeContext";
-const Categorias = () => {
+import React from "react";
+const Categorias = React.memo(() => {
     const {darkMode} = useDarkModeContext();
     return (
         <>
@@ -19,6 +20,6 @@ const Categorias = () => {
             </li>
         </>
     );
-}
+})
 
 export default Categorias;

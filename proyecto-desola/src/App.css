@@ -31,10 +31,6 @@ body{
     background-color: white;
 }
 
-.cardDark {
-    background-color: hsl(0,0,33%);
-}
-
 span {
     font-size: 12px;
 }
@@ -217,6 +213,21 @@ margin-bottom: 2rem !important;
     color: gainsboro;
     min-height: 100vh;
     
+}
+
+.cartContainer {
+    margin-top: 3%;
+    margin-left: 26,5%;
+}
+
+.divButtons button {
+    margin:1em;
+    min-width: 250px;
+}
+
+.cardCart {
+    max-width: 640px;
+    padding: 0px;
 }
 
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Itemlist from "../ItemList/ItemList";
+import {ItemList}  from "../ItemList/ItemList";
 
 //Context//
 import { useDarkModeContext } from "../../context/DarkModeContext";
@@ -15,7 +15,7 @@ export const Itemlistcontainer = () => {
             .then(response => response.json())
             .then(items => {
                 const products = items.filter(prod => prod.nombreCategoria === nombreCategoria)
-                const productsList = Itemlist({ products }) //Array de productos jsx
+                const productsList = <ItemList products={products} plantilla={'item'}/> //Array de productos jsx
                 console.log(productsList)
                 setProductos(productsList)
             })
@@ -24,7 +24,7 @@ export const Itemlistcontainer = () => {
             fetch('./json/productos.json')
             .then(response => response.json())
             .then(products => {
-                const productsList = Itemlist({ products }) //Array de productos jsx
+                const productsList = <ItemList products={products} plantilla={'item'}/> //Array de productos jsx
                 console.log(productsList)
                 setProductos(productsList)
             })
