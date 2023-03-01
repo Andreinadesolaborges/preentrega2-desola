@@ -36,7 +36,7 @@ export const Itemlistcontainer = () => {
             <div id="productos" className="container-fluid p-3 border-top border-bottom">
                 <div className="row align-items-center py-3">
                     <div className="col-12 text-center align-self-center mt-3">
-                        <h2>Productos</h2>
+                        <h2 className={`${darkMode ? 'text-light' : 'text-dark'} py-3`}>Productos</h2>
                     </div>
                     <div className="row align-items-center py-3">
                         {productos}

@@ -8,7 +8,7 @@ const Categorias = () => {
                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <button className={`btn ${darkMode ? 'text-white' : 'text-dark'}`}>Productos</button>
                 </a>
-                <ul className="dropdown-menu">
+                <ul className={`${darkMode ? 'dropdown-menu dropdown-menu-dark' : 'dropdown-menu'}`}>
                     <li><Link className="dropdown-item" to={"/category/Aromaterapia"}>Aromaterapia</Link></li>
                     <li><Link className="dropdown-item" to={"/category/Sahumerios"}>Sahumerios</Link></li>
                     <li><Link className="dropdown-item" to={"/category/Libros"}>Libros</Link></li>
