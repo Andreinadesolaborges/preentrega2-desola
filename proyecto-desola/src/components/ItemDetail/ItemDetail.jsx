@@ -12,7 +12,7 @@ export const Itemdetail = ({ item }) => {
             <div className="container-fluid p-3">
                 <div className="row g-0 align-items-center px-3">
                     <div className="col-md-4 text-center align-self-center py-3">
-                        <img className="card-img-top img-fluid" src={`../img/${item.img}`} alt={`Imagen de ${item.nombre}`} />
+                        <img className="card-img-top img-fluid" src={item.img} alt={`Imagen de ${item.nombre}`} />
                     </div>
                     <div className="offset-md-1 col-md-6 text-center align-self-center px-3">
                         <div className="card-body">

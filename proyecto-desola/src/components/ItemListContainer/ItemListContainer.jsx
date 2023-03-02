@@ -4,28 +4,26 @@ import {ItemList}  from "../ItemList/ItemList";
 
 //Context//
 import { useDarkModeContext } from "../../context/DarkModeContext";
+
+//Firebase
+import { getProductos } from "../../firebase/firebase";
 export const Itemlistcontainer = () => {
     const [productos, setProductos] = useState([]);
     const {nombreCategoria} = useParams();
     const {darkMode} = useDarkModeContext();
-    console.log(darkMode);
     useEffect(() => {
         if (nombreCategoria){
-            fetch('../json/productos.json')
-            .then(response => response.json())
+            getProductos()
             .then(items => {
                 const products = items.filter(prod => prod.nombreCategoria === nombreCategoria)
                 const productsList = <ItemList products={products} plantilla={'item'}/> //Array de productos jsx
-                console.log(productsList)
                 setProductos(productsList)
             })
         }
         else {
-            fetch('./json/productos.json')
-            .then(response => response.json())
+            getProductos()
             .then(products => {
                 const productsList = <ItemList products={products} plantilla={'item'}/> //Array de productos jsx
-                console.log(productsList)
                 setProductos(productsList)
             })
         }

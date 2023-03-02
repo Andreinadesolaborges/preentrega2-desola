@@ -7,6 +7,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 //Toastify//
 import { ToastContainer } from 'react-toastify';
 
+//BDD Firebase//
+
+import { getProductos } from './firebase/firebase';
+
 //Componentes//
 import Navbar from "./components/Navbar/Navbar";
 import Cardcontainer from "./components/CardContainer/CardContainer";
@@ -17,6 +21,7 @@ import { Cart } from './components/Cart/Cart';
 
 //Context//
 import { DarkModeProvider } from './context/DarkModeContext';
+
 const App = () => {
   return (
     <>

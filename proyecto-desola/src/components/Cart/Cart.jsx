@@ -4,9 +4,9 @@ import { ItemList } from "../ItemList/ItemList";
 export const Cart = () => {
 
     const { darkMode } = useDarkModeContext();
-    const carrito = [{ nombre: "Arroz", img: 'amatista.png', modelo: "1", precio: 4000, cantidad: 5 },
-    { nombre: "Fideos", modelo: "2", img: 'amatista.png', precio: 3000, cantidad: 2 },
-    { nombre: "Papas", modelo: "3", img: 'amatista.png', precio: 5000, cantidad: 3 }]
+    const carrito = [{ nombre: "Arroz", img: 'https://firebasestorage.googleapis.com/v0/b/proyecto-react-75934.appspot.com/o/amatista.png?alt=media&token=be48dfac-8675-4ff7-bd36-8fe273fea685', modelo: "1", precio: 4000, cantidad: 5 },
+    { nombre: "Fideos", modelo: "2", img: 'https://firebasestorage.googleapis.com/v0/b/proyecto-react-75934.appspot.com/o/amatista.png?alt=media&token=be48dfac-8675-4ff7-bd36-8fe273fea685', precio: 3000, cantidad: 2 },
+    { nombre: "Papas", modelo: "3", img: 'https://firebasestorage.googleapis.com/v0/b/proyecto-react-75934.appspot.com/o/amatista.png?alt=media&token=be48dfac-8675-4ff7-bd36-8fe273fea685', precio: 5000, cantidad: 3 }]
 
     return (
         <>

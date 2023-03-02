@@ -5,7 +5,7 @@ export const ItemCart = ({item}) => {
         <div className={`card ${darkMode ? 'text-white bg-dark' : 'text-dark bg-white' }  mb-3 cardCart d-flex align-items-center mx-auto`}>
             <div className="row g-0 d-flex align-items-center">
                 <div className="col-md-4 d-flex align-items-center">
-                    <img src={`/img/${item.img}`} alt={`Imagen de producto ${item.nombre}`} className="img-fluid" />
+                    <img src={item.img} alt={`Imagen de producto ${item.nombre}`} className="img-fluid" />
                 </div>
                 <div className="col-md-6 d-flex align-items-center">
                     <div className="card-body">

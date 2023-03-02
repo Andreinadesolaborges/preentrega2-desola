@@ -7,7 +7,7 @@ const Item = ({ item }) => {
         <>
             <div className="col-6 col-sm-4 col-md-3 text-center align-self-center">
                 <div className={` ${darkMode ? 'text-white bg-dark' : 'text-dark bg-white' } card hvr-float-shadow my-3`}>
-                    <img  src={`../img/${item.img}`} className="card-img-top img-fluid" alt={`Imagen de ${item.nombre}`} />
+                    <img  src={item.img} className="card-img-top img-fluid" alt={`Imagen de ${item.nombre}`} />
                     <div className="card-body">
                         <h4 className="card-title">{item.nombre}</h4>
                         <p className="card-text card-info">{item.descripcion}</p>
