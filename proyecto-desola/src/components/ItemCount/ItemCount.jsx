@@ -10,7 +10,7 @@ const Itemcount = ({valInicial, stock, onAdd}) => {
 
     const agregarCarrito = () => {
         onAdd(contador);
-        toast.success('🦄 Ha sido agregado');
+        toast.success('🦄 El producto ha sido agregado');
     };
     return (
         <>

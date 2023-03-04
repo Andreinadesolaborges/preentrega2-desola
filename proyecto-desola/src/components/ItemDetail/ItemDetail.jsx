@@ -1,12 +1,13 @@
 import Itemcount from "../ItemCount/ItemCount";
 import { useDarkModeContext } from "../../context/DarkModeContext";
+import { useCarritoContext } from "../../context/CarritoContext";
 export const Itemdetail = ({ item }) => {
     const { darkMode } = useDarkModeContext();
+    const {addItem} = useCarritoContext();
     const onAdd = (cantidad) => {
-        console.log(cantidad);
-        console.log(item);
+        addItem(item, cantidad)
     }
-
+    
     return (
         <>
             <div className="container-fluid p-3">
