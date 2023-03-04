@@ -7,7 +7,7 @@ export const Itemdetail = ({ item }) => {
     const onAdd = (cantidad) => {
         addItem(item, cantidad)
     }
-    
+
     return (
         <>
             <div className="container-fluid p-3">
@@ -19,6 +19,7 @@ export const Itemdetail = ({ item }) => {
                         <div className="card-body">
                             <h4 className={`card-title ${darkMode ? 'text-light' : 'text-dark'}`}>{item.nombre}</h4>
                             <p className="card-text">{item.descripcion}</p>
+                            <p className="card-text">Stock: {item.stock}</p>
                             <h6 className={`price-text-detail badge rounded-pill ${darkMode ? 'bg-primary' : 'bg-light'} d-block mx-auto`}  >${new Intl.NumberFormat('de-DE').format(item.precio)}</h6>
                             <Itemcount valInicial={1} stock={item.stock} onAdd={onAdd} />
                         </div>

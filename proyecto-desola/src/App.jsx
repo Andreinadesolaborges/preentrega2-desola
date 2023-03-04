@@ -19,9 +19,11 @@ import { Checkout } from './components/Checkout/Checkout';
 //Context//
 import { DarkModeProvider } from './context/DarkModeContext';
 import { CarritoProvider } from './context/CarritoContext';
+//import { cargarBDD } from './firebase/firebase';//
 
 
 const App = () => {
+  //cargarBDD();//
   return (
     <>
       <BrowserRouter>
