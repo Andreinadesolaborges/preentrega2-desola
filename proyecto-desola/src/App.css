@@ -51,6 +51,10 @@ a {
     font-size: 12px;
 }
 
+.noUnderline{
+    text-decoration: none;
+}
+
 .card-info {
     font-size: 10px;
     display: -webkit-box;
